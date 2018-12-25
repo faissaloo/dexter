@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+geneticalgorithm.so
+geneticalgorithm.dylib
+geneticalgorithm.dll
+geneticalgorithm.a
+geneticalgorithm.lib
+geneticalgorithm-test-*
+*.exe
+*.o
+*.obj
+*.lst
