@@ -1,6 +1,7 @@
 import std.stdio;
 import evolver;
 import params;
+import acceptanceSpec;
 
 void main(string[] args)
 {
@@ -29,5 +30,8 @@ void main(string[] args)
   writeln("\nSolution found in generation ", evo.generationCount);
   writeln("Fitness: ", evo.population.getFittest().fitness);
   writeln("chromosome: ");
+
   writeln(evo.population.getFittest().getProgram());
+  writeln("Final test:");
+  run(evo.population.getFittest().getProgram(), true);
 }

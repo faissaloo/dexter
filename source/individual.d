@@ -47,7 +47,7 @@ class Individual {
 
     auto isPerfect()
     {
-      return fitness == 1;
+      return fitness >= 1;
     }
 
     auto getProgram()
