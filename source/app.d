@@ -1,21 +1,12 @@
 import std.stdio;
-import std.random;
-import std.math;
-import std.array;
-import std.algorithm;
-import std.conv;
-import std.parallelism;
-import acceptanceSpec;
 import evolver;
-import population;
-import individual;
 import params;
 
 void main(string[] args)
 {
   Evolver evo = new Evolver(POPULATION_SIZE);
 
-  writeln("Generation: ", evo.generationCount, " Fittest: ", evo.population.getFittest().fitness, " Program: ", join(evo.population.getFittest().chromosome));
+  writeln("Generation: ", evo.generationCount, " Fittest: ", evo.population.getFittest().fitness, " Program: ", evo.population.getFittest().getProgram());
 
   while (!evo.population.getFittest().isPerfect())
   {
@@ -32,7 +23,7 @@ void main(string[] args)
       evo.addFittestOffspring();
       evo.population.calculateFitness();
 
-      writeln("Generation: ", evo.generationCount, " Fittest: ", evo.population.getFittest().fitness, " Program: ", join(evo.population.getFittest().chromosome));
+      writeln("Generation: ", evo.generationCount, " Fittest: ", evo.population.getFittest().fitness, " Program: ", evo.population.getFittest().getProgram());
   }
 
   writeln("\nSolution found in generation ", evo.generationCount);

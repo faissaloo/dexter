@@ -12,7 +12,7 @@ auto run(string program)
     vm.reset();
     vm.load(program);
     vm.run(MAX_CYCLES);
-    tester.score!(ubyte)(vm.dumpMemory()[0], 50);
+    tester.score(vm.dumpOutput(), "hi");
     return tester.fitness();
   }
   catch(InvalidProgram e)

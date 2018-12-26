@@ -1,15 +1,7 @@
-import std.stdio;
 import std.random;
-import std.math;
-import std.array;
 import std.algorithm;
-import std.conv;
 import std.parallelism;
-import acceptanceSpec;
-import evolver;
-import population;
 import individual;
-import params;
 
 class Population {
     Individual[] individuals;
